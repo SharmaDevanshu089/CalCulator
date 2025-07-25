@@ -3,9 +3,9 @@ Using:
   - Once-cell
 TODO:
 Add Feature:
-  - ~Greet Function~
-  - Exit Option
-  - ~Addition~
-  - Subtraction
-  - Multiplication
-  - Division
+  - ~Greet Function~:Done
+  - Exit Option:Done
+  - ~Addition~:Done
+  - Subtraction:Done
+  - Multiplication:Done
+  - Division:Done
