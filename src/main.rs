@@ -2,22 +2,34 @@
 #[allow(non_snake_case)]
 #[allow(unused_mut)]
 use std::io;
+//using once-cell
+use once_cell::sync::OnceCell;
 //I like Dead Code for Debugging
 //This is Calculator App Made By Devanshu
+// Creating a global variable for username
+static USER_NAME: OnceCell<String> = OnceCell::new();
 fn main() {
     //main Function will call the start later
     //for debugging
     greet();
 }
 fn greet(){
-    let msg = "Hello There this is CalCulator created.";
-    let nameQues = "Please Enter your name";
+    let msg = "======  Hello There this is CalCulator created. =====";
+    let nameQues = "============= Please Enter your name ==============";
     println!("{}\n{}",msg , nameQues);
     let name: String = input();
-    println!("Hello {}", name);
-    listOptions(name);
+    USER_NAME.set(name).unwrap();
+    if let Some(name_from_cell) = USER_NAME.get() 
+    {
+        println!("Hello, {}!", name_from_cell.trim());
+    }
+    listOptions();
 }
-fn listOptions(name: String) {
+fn listOptionsTry() {
+    println!("========== Please Try Again ==========");
+    listOptions();
+}
+fn listOptions() {
     println!("What Operation Would you like to perform:");
     println!("1 => Addition");
     // println!("2 => Subtraction");
@@ -29,7 +41,7 @@ fn listOptions(name: String) {
 fn executeChoice(choice: i8) {
     match choice {
         1 => addition(),
-        _ => greet(),
+        _ => listOptions(),
     }
 }
 fn addition() {
@@ -38,7 +50,9 @@ fn addition() {
     println!("Please Enter Other Number:");
     let mut y:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
     let z = x +y;
-    println!("The Output is: {}" ,z)
+    println!("The Output is: {}" ,z);
+    println!("=================================================");
+    listOptions();
 }
 //I need to Create a Input funtion to take input
 fn input() -> String{
