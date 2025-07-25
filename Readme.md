@@ -1,4 +1,4 @@
-```# 🧮 Terminal Calculator in Rust
+# 🧮 Terminal Calculator in Rust
 
 Welcome to **Devanshu's Terminal Calculator** – a beginner-friendly CLI calculator built in Rust 🦀. It supports basic arithmetic operations like addition, subtraction, multiplication, and division — all via a simple text interface!
 
@@ -19,7 +19,7 @@ Welcome to **Devanshu's Terminal Calculator** – a beginner-friendly CLI calcul
 
 ## 🛠️ Technologies Used
 
-- **Rust**
+- Rust
 - `once_cell` for global static memory
 - `std::io` for input/output
 - `match` and modular functions for control flow
@@ -43,7 +43,7 @@ sudo apt install rustc cargo
 ### 2. Clone This Repository
 
 ```bash
-git clone https://github.com/your-username/rust-calculator.git
+git clone https://github.com/sharmadevanshu089/rust-calculator.git
 cd rust-calculator
 ```
 
@@ -77,8 +77,8 @@ What Operation Would you like to perform:
 
 ```
 src/
-├── main.rs     # Main logic and function calls
-Cargo.toml      # Dependencies (once_cell)
+├── main.rs       # Main logic and function calls
+Cargo.toml        # Dependencies (once_cell)
 ```
 
 ---
@@ -95,7 +95,7 @@ Cargo.toml      # Dependencies (once_cell)
 
 ## 🧠 Author
 
-Made with ❤️ by [Devanshu Sharma](https://github.com/emotional-push)
+Made with ❤️ by [Devanshu Sharma](https://github.com/sharmadevanshu089)
 
 ---
 
