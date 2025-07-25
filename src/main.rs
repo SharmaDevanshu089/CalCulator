@@ -33,7 +33,12 @@ fn executeChoice(choice: i8) {
     }
 }
 fn addition() {
-    println!("Addition")
+    println!("Please Enter Initial Number to add:");
+    let mut x:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    print!("Please Enter Other Number:");
+    let mut y:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    let z = x +y;
+    println!("The Output is: {}" ,z)
 }
 //I need to Create a Input funtion to take input
 fn input() -> String{
