@@ -35,7 +35,7 @@ fn executeChoice(choice: i8) {
 fn addition() {
     println!("Please Enter Initial Number to add:");
     let mut x:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
-    print!("Please Enter Other Number:");
+    println!("Please Enter Other Number:");
     let mut y:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
     let z = x +y;
     println!("The Output is: {}" ,z)
