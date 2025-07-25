@@ -12,7 +12,7 @@ fn main() {
 fn greet(){
     let msg = "Hello There this is CalCulator created.";
     let nameQues = "Please Enter your name";
-    println!("{}/n{}",msg , nameQues);
+    println!("{}\n{}",msg , nameQues);
     let name: String = input();
     println!("Hello {}", name);
     listOptions(name);
@@ -24,6 +24,7 @@ fn listOptions(name: String) {
     // println!("3 => Multiplication");
     // println!("4 => Division")
     let mut choice:i8 = inputChoice();
+    executeChoice(choice);
 }
 fn executeChoice(choice: i8) {
     match choice {
