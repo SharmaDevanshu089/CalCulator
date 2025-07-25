@@ -30,17 +30,23 @@ fn listOptionsTry() {
     listOptions();
 }
 fn listOptions() {
+    println!("================================");
     println!("What Operation Would you like to perform:");
     println!("1 => Addition");
-    // println!("2 => Subtraction");
-    // println!("3 => Multiplication");
-    // println!("4 => Division")
+    println!("2 => Subtraction");
+    println!("3 => Multiplication");
+    println!("4 => Division");
+    println!("5 => Quit");
     let mut choice:i8 = inputChoice();
     executeChoice(choice);
 }
 fn executeChoice(choice: i8) {
     match choice {
         1 => addition(),
+        2 => Subtraction(),
+        3 => Multiplication(),
+        4 => Division(),
+        5 => Quit(),
         _ => listOptions(),
     }
 }
@@ -53,6 +59,39 @@ fn addition() {
     println!("The Output is: {}" ,z);
     println!("=================================================");
     listOptions();
+}
+fn Subtraction() {
+    println!("Please Enter Initial Number to Subtract:");
+    let mut x:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    println!("Please Enter Other Number:");
+    let mut y:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    let z = x -y;
+    println!("The Output is: {}" ,z);
+    println!("=================================================");
+    listOptions();
+}
+fn Multiplication() {
+    println!("Please Enter Initial Number to Multiply:");
+    let mut x:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    println!("Please Enter Other Number:");
+    let mut y:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    let z = x * y;
+    println!("The Output is: {}" ,z);
+    println!("=================================================");
+    listOptions();
+}
+fn Division() {
+    println!("Please Enter Initial Number to Divide:");
+    let mut x:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    println!("Please Enter Other Number:");
+    let mut y:i128 = input().trim().parse().expect("Error, Something that should be a number is a not a number");
+    let z = x /y;
+    println!("The Output is: {}" ,z);
+    println!("=================================================");
+    listOptions();
+}
+fn Quit() {
+    println!("========================================================\n         Thank You\n===========================================");
 }
 //I need to Create a Input funtion to take input
 fn input() -> String{
