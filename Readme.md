@@ -2,6 +2,8 @@ This is Just a Basic Calculator App in Rust by me to learn how does Functions wo
 
 TODO:
 Add Feature:
+  - Greet Function
+  - Exit Option
   - Addition
   - Subtraction
   - Multiplication
