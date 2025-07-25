@@ -1,6 +1,11 @@
+//This is Calculator App Made By Devanshu
 fn main() {
-    new();
+    //main Function will call the start later
 }
-fn new() {
-    println!("Helloworld")
+fn greet(){
+    let msg = "Hello There this is CalCulator created.";
+    let nameQues = "Please Enter your name"
+}
+fn listOptions() {
+    
 }
